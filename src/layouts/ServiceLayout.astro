@@ -1,0 +1,67 @@
+---
+import Layout from "./Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import { Picture } from "astro:assets";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+
+      <div class="mx-auto prose prose-lg mt-6">
+        <div class="my-8 overflow-hidden rounded-lg">
+          <Picture
+            src={frontmatter.image}
+            alt=""
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 800px) 100vw, 800px"
+            loading="eager"
+            format="avif"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <div class="mt-8 grid gap-8">
+          <div class="flex flex-col gap-3">
+            <h2 class="text-2xl font-bold">Overview</h2>
+            <p class="text-lg text-slate-600">
+              {frontmatter.overview}
+            </p>
+          </div>
+
+          {frontmatter.features && (
+            <div class="flex flex-col gap-3">
+              <h2 class="text-2xl font-bold">Key Features</h2>
+              <ul class="list-disc list-inside space-y-3 text-slate-600">
+                {frontmatter.features.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {frontmatter.benefits && (
+            <div class="flex flex-col gap-3">
+              <h2 class="text-2xl font-bold">Benefits</h2>
+              <ul class="list-disc list-inside space-y-3 text-slate-600">
+                {frontmatter.benefits.map((benefit) => (
+                  <li>{benefit}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <slot />
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <Link href="mailto:contact@bytelogix.com" style="primary">Get Started</Link>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout> 

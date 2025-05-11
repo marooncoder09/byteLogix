@@ -1,0 +1,53 @@
+---
+import ServiceLayout from "@layouts/ServiceLayout.astro";
+import enterpriseImage from "../../assets/enterprise.png";
+
+const frontmatter = {
+  image: enterpriseImage,
+  overview: "Our enterprise solutions are designed to meet the complex needs of large organizations, providing scalable, secure, and integrated IT systems that drive digital transformation and operational excellence.",
+  features: [
+    "Enterprise Resource Planning (ERP) Integration",
+    "Custom Software Development",
+    "Cloud Infrastructure Management",
+    "Enterprise-grade Security Solutions",
+    "Business Process Automation",
+    "Data Analytics and Business Intelligence"
+  ],
+  benefits: [
+    "Improved Operational Efficiency",
+    "Enhanced Data Management",
+    "Streamlined Business Processes",
+    "Increased Scalability",
+    "Better Decision Making",
+    "Reduced Operational Costs"
+  ]
+};
+---
+
+<ServiceLayout frontmatter={frontmatter}>
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Enterprise Capabilities</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-6">
+      <div class="flex flex-col gap-2">
+        <div class="bg-slate-50 p-5 rounded-lg">
+          <h3 class="font-semibold">Digital Transformation</h3>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li>• Legacy System Modernization</li>
+            <li>• Cloud Migration Strategy</li>
+            <li>• Digital Workflow Implementation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="bg-slate-50 p-5 rounded-lg">
+          <h3 class="font-semibold">Integration Services</h3>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li>• API Development & Management</li>
+            <li>• System Integration</li>
+            <li>• Data Migration Services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ServiceLayout> 

@@ -1,0 +1,69 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const solutions = [
+  {
+    title: "Enterprise Solutions",
+    description: "Comprehensive IT solutions designed for large-scale enterprises, focusing on scalability, integration, and digital transformation.",
+    image: "https://placeholder.com/800x600",
+    link: "/solutions/enterprise"
+  },
+  {
+    title: "Small Business",
+    description: "Tailored IT solutions that help small businesses grow and compete effectively in the digital marketplace.",
+    image: "https://placeholder.com/800x600",
+    link: "/solutions/small-business"
+  },
+  {
+    title: "Startups",
+    description: "Agile and innovative IT solutions designed to help startups scale rapidly and establish their digital presence.",
+    image: "https://placeholder.com/800x600",
+    link: "/solutions/startups"
+  },
+  {
+    title: "Industries",
+    description: "Specialized IT solutions customized for different industry sectors and their unique requirements.",
+    image: "https://placeholder.com/800x600",
+    link: "/solutions/industries"
+  }
+];
+---
+
+<Layout title="Solutions">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Solutions</Fragment>
+      <Fragment slot="desc">
+        Tailored IT solutions for businesses of all sizes
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+      {
+        solutions.map((item) => (
+          <a href={item.link} class="group">
+            <div class="flex flex-col gap-4 items-start transition duration-300 ease-in-out transform hover:scale-105">
+              <div class="w-full aspect-video overflow-hidden rounded-lg">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-2xl font-semibold group-hover:text-blue-600">
+                  {item.title}
+                </h3>
+                <p class="text-slate-500">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+</Layout> 

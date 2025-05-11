@@ -1,0 +1,79 @@
+---
+import ServiceLayout from "@layouts/ServiceLayout.astro";
+import developmentImage from "../../assets/development.png";
+
+const frontmatter = {
+  image: developmentImage,
+  overview: "Our software development services deliver custom-built applications that solve your unique business challenges. We combine cutting-edge technology with industry best practices to create scalable, secure, and user-friendly solutions.",
+  features: [
+    "Custom Application Development",
+    "Web & Mobile App Development",
+    "API Development & Integration",
+    "Legacy System Modernization",
+    "DevOps & Continuous Integration",
+    "Quality Assurance & Testing"
+  ],
+  benefits: [
+    "Tailored to Your Specific Needs",
+    "Improved Business Efficiency",
+    "Enhanced User Experience",
+    "Scalable Solutions",
+    "Competitive Advantage",
+    "Reduced Technical Debt"
+  ]
+};
+---
+
+<ServiceLayout frontmatter={frontmatter}>
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Development Process</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-6">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">1. Discovery & Planning</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Requirements Analysis</li>
+          <li>• Technical Architecture</li>
+          <li>• Project Roadmap</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">2. Development</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Agile Development</li>
+          <li>• Regular Updates</li>
+          <li>• Code Reviews</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">3. Delivery & Support</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Testing & QA</li>
+          <li>• Deployment</li>
+          <li>• Maintenance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Technologies We Use</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-4">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Frontend</h3>
+        <p class="text-slate-600">React, Angular, Vue.js, Next.js</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Backend</h3>
+        <p class="text-slate-600">Node.js, Python, Java, .NET</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Mobile</h3>
+        <p class="text-slate-600">React Native, Flutter, Native iOS/Android</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Cloud & DevOps</h3>
+        <p class="text-slate-600">AWS, Azure, Docker, Kubernetes</p>
+      </div>
+    </div>
+  </div>
+</ServiceLayout> 

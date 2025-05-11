@@ -1,0 +1,57 @@
+---
+import ServiceLayout from "@layouts/ServiceLayout.astro";
+import strategyImage from "../../assets/strategy.png";
+
+const frontmatter = {
+  image: strategyImage,
+  overview: "Our IT Strategy & Consulting services help organizations align their technology initiatives with business objectives. We provide comprehensive roadmaps and strategic guidance to drive digital transformation and maximize ROI on technology investments.",
+  features: [
+    "Technology Assessment & Roadmap Development",
+    "Digital Transformation Strategy",
+    "IT Infrastructure Planning",
+    "Technology Stack Optimization",
+    "IT Governance & Compliance",
+    "Cost Optimization & ROI Analysis"
+  ],
+  benefits: [
+    "Aligned IT & Business Goals",
+    "Optimized Technology Investments",
+    "Reduced Operational Costs",
+    "Enhanced Digital Capabilities",
+    "Improved Decision Making",
+    "Future-Proof Technology Stack"
+  ]
+};
+---
+
+<ServiceLayout frontmatter={frontmatter}>
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Our Methodology</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-6">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Assessment</h3>
+        <p class="text-slate-600 mt-2">
+          Comprehensive analysis of current IT infrastructure, processes, and capabilities
+        </p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Strategy Development</h3>
+        <p class="text-slate-600 mt-2">
+          Creation of tailored roadmaps aligned with business objectives
+        </p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Implementation Planning</h3>
+        <p class="text-slate-600 mt-2">
+          Detailed execution plans with clear milestones and deliverables
+        </p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Continuous Optimization</h3>
+        <p class="text-slate-600 mt-2">
+          Regular review and adjustment of strategies for optimal results
+        </p>
+      </div>
+    </div>
+  </div>
+</ServiceLayout> 

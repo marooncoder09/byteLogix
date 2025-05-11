@@ -1,0 +1,79 @@
+---
+import ServiceLayout from "@layouts/ServiceLayout.astro";
+import cloudImage from "../../assets/cloud.png";
+
+const frontmatter = {
+  image: cloudImage,
+  overview: "Our cloud solutions help businesses leverage the power of cloud computing to improve scalability, reduce costs, and enhance operational efficiency. We provide end-to-end cloud services from migration to management and optimization.",
+  features: [
+    "Cloud Migration Services",
+    "Multi-Cloud Management",
+    "Cloud Security & Compliance",
+    "Cloud Cost Optimization",
+    "Disaster Recovery & Backup",
+    "Cloud Architecture Design"
+  ],
+  benefits: [
+    "Improved Scalability",
+    "Reduced Infrastructure Costs",
+    "Enhanced Business Agility",
+    "Better Disaster Recovery",
+    "Global Accessibility",
+    "Pay-as-you-go Flexibility"
+  ]
+};
+---
+
+<ServiceLayout frontmatter={frontmatter}>
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Cloud Platforms</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-6">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Amazon Web Services</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• EC2 & ECS</li>
+          <li>• S3 Storage</li>
+          <li>• RDS & DynamoDB</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Microsoft Azure</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Azure VMs</li>
+          <li>• Azure Storage</li>
+          <li>• Azure SQL</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Google Cloud</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Compute Engine</li>
+          <li>• Cloud Storage</li>
+          <li>• BigQuery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Migration Process</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-4">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">1. Assessment</h3>
+        <p class="text-slate-600">Evaluate current infrastructure and define migration strategy</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">2. Planning</h3>
+        <p class="text-slate-600">Design cloud architecture and create migration roadmap</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">3. Migration</h3>
+        <p class="text-slate-600">Execute migration with minimal disruption</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">4. Optimization</h3>
+        <p class="text-slate-600">Monitor, optimize, and enhance cloud performance</p>
+      </div>
+    </div>
+  </div>
+</ServiceLayout> 

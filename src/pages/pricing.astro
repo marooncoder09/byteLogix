@@ -1,0 +1,75 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Startup Package",
+    price: "$999/mo",
+    popular: false,
+    features: [
+      "IT Infrastructure Assessment",
+      "Basic Cloud Solutions",
+      "8/5 Technical Support",
+      "Network Security Setup",
+      "Data Backup Solutions",
+      "Monthly Strategy Meeting",
+    ],
+    button: {
+      text: "Get Started",
+      link: "mailto:contact@bytelogix.com",
+    },
+  },
+  {
+    name: "Business Growth",
+    price: "$2,499/mo",
+    popular: true,
+    features: [
+      "All Startup Features",
+      "Custom Software Development",
+      "24/7 Priority Support",
+      "Advanced Cloud Integration",
+      "Cybersecurity Monitoring",
+      "Quarterly Digital Strategy",
+    ],
+    button: {
+      text: "Get in Touch",
+      link: "mailto:contact@bytelogix.com",
+    },
+  },
+  {
+    name: "Enterprise Solutions",
+    price: "Custom",
+    popular: false,
+    features: [
+      "All Growth Features",
+      "Digital Transformation",
+      "Dedicated IT Team",
+      "Enterprise Architecture",
+      "Custom Security Protocols",
+      "24/7 Executive Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "mailto:contact@bytelogix.com",
+    },
+  },
+];
+---
+
+<Layout title="IT Service Packages">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">IT Service Packages</Fragment>
+      <Fragment slot="desc">
+        Tailored IT solutions to drive your business forward
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

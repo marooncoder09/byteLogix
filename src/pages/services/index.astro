@@ -1,0 +1,79 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Picture } from "astro:assets";
+import strategyImage from "../../assets/strategy.png";
+import developmentImage from "../../assets/development.png";
+import cloudImage from "../../assets/cloud.png";
+import cybersecurityImage from "../../assets/cyber.png";
+
+
+const services = [
+  {
+    title: "IT Strategy & Consulting",
+    description: "Strategic technology planning and roadmap development to align your IT infrastructure with business goals.",
+    image: strategyImage,
+    link: "/services/strategy"
+  },
+  {
+    title: "Software Development",
+    description: "Custom software solutions tailored to your unique business needs and challenges.",
+    image: developmentImage,
+    link: "/services/development"
+  },
+  {
+    title: "Cloud Solutions",
+    description: "Comprehensive cloud services for enhanced scalability and operational efficiency.",
+    image: cloudImage,
+    link: "/services/cloud"
+  },
+  {
+    title: "Cybersecurity",
+    description: "Robust security solutions to protect your digital assets and infrastructure.",
+    image: cybersecurityImage,
+    link: "/services/security"
+  }
+];
+---
+
+<Layout title="Services">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Services</Fragment>
+      <Fragment slot="desc">
+        Comprehensive IT solutions tailored to your business needs
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {
+        services.map((item) => (
+          <a href={item.link} class="group">
+            <div class="flex flex-col gap-4 items-start transition duration-300 ease-in-out transform hover:scale-105">
+              <div class="w-full h-[200px] overflow-hidden rounded-lg relative">
+                <Picture
+                  src={item.image}
+                  alt={item.title}
+                  widths={[400, 800]}
+                  sizes="(max-width: 800px) 100vw, 400px"
+                  loading="lazy"
+                  format="avif"
+                  class="w-full h-full object-cover object-top absolute inset-0"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-2xl font-semibold group-hover:text-blue-600">
+                  {item.title}
+                </h3>
+                <p class="text-slate-500">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+</Layout> 

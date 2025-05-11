@@ -1,0 +1,81 @@
+---
+import ServiceLayout from "@layouts/ServiceLayout.astro";
+import smallBusinessImage from "../../assets/small-business.png";
+
+const frontmatter = {
+  title: "Small Business Solutions",
+  description: "Affordable and effective IT solutions for growing businesses",
+  image: smallBusinessImage,
+  overview: "Our small business solutions are designed to provide growing companies with enterprise-grade IT capabilities at an affordable price point. We help small businesses leverage technology to compete effectively and scale efficiently.",
+  features: [
+    "Cloud-based Business Solutions",
+    "Managed IT Services",
+    "Cybersecurity Essentials",
+    "Business Communication Tools",
+    "Data Backup & Recovery",
+    "IT Support & Maintenance"
+  ],
+  benefits: [
+    "Cost-Effective Solutions",
+    "Scalable Infrastructure",
+    "Enhanced Productivity",
+    "Reduced IT Overhead",
+    "Professional IT Support",
+    "Business Continuity"
+  ]
+};
+---
+
+<ServiceLayout frontmatter={frontmatter}>
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Solution Packages</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-6">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Essential IT</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Basic Cloud Services</li>
+          <li>• Email & Collaboration</li>
+          <li>• Help Desk Support</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Business Growth</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Advanced Security</li>
+          <li>• Business Applications</li>
+          <li>• Priority Support</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Professional</h3>
+        <ul class="mt-2 space-y-2 text-slate-600">
+          <li>• Custom Solutions</li>
+          <li>• Advanced Analytics</li>
+          <li>• 24/7 Support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Why Choose Us</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-4">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Affordable Pricing</h3>
+        <p class="text-slate-600">Flexible payment plans tailored to your budget</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Scalable Solutions</h3>
+        <p class="text-slate-600">Grow your IT capabilities as your business expands</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Expert Support</h3>
+        <p class="text-slate-600">Dedicated team of IT professionals at your service</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Quick Implementation</h3>
+        <p class="text-slate-600">Fast deployment with minimal business disruption</p>
+      </div>
+    </div>
+  </div>
+</ServiceLayout> 

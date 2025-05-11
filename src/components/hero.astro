@@ -1,0 +1,47 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="IT Services Illustration"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Innovative IT Solutions for Your Business
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Transform your business with our cutting-edge IT consulting and digital solutions. We help organizations navigate the digital landscape with strategic technology implementations, custom software development, and expert IT consulting services.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="mailto:contact@bytelogix.com"
+        class="flex gap-1 items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-indigo-700 group"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5 transition-transform duration-300 group-hover:rotate-12" name="bx:bxs-conversation" />
+         Get in Touch
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="/services"
+        class="flex gap-1 items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-slate-100 hover:border-slate-500 group">
+        <Icon class="text-black w-4 h-4 transition-all duration-300 group-hover:text-slate-800" name="bx:bxs-briefcase" />
+         Our Services
+      </Link>
+    </div>
+  </div>
+</main>

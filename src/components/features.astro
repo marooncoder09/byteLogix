@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "IT Strategy Consulting",
+    description:
+      "Strategic technology planning and roadmap development to align your IT infrastructure with business goals and drive digital transformation.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Custom Software Development",
+    description:
+      "Tailored software solutions built with cutting-edge technologies to address your unique business challenges and requirements.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Cloud Solutions",
+    description:
+      "Expert cloud migration, optimization, and management services to enhance scalability, security, and operational efficiency.",
+    icon: "bx:bxs-cloud",
+  },
+  {
+    title: "Cybersecurity Services",
+    description:
+      "Comprehensive security assessments, implementation of robust security measures, and ongoing monitoring to protect your digital assets.",
+    icon: "bx:bxs-shield",
+  },
+  {
+    title: "Digital Transformation",
+    description:
+      "End-to-end digital transformation services to modernize your business processes and enhance customer experience.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "24/7 IT Support",
+    description:
+      "Round-the-clock technical support and maintenance services to ensure your systems run smoothly and efficiently.",
+    icon: "bx:bxs-time-five",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Comprehensive IT Services for Modern Businesses
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    We deliver end-to-end IT solutions that help businesses thrive in the digital age. Our expert team ensures your technology drives growth and innovation.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,56 @@
+---
+import ServiceLayout from "@layouts/ServiceLayout.astro";
+import cybersecurityImage from "../../assets/cyber.png";
+
+const frontmatter = {
+  image: cybersecurityImage,
+  overview: "Our cybersecurity services provide robust protection for your business against evolving digital threats. We implement multi-layered security measures, conduct regular assessments, and provide continuous monitoring to ensure your data and systems remain secure.",
+  features: [
+    "24/7 Security Monitoring and Threat Detection",
+    "Vulnerability Assessment and Penetration Testing",
+    "Security Incident Response and Management",
+    "Data Encryption and Protection Solutions",
+    "Security Awareness Training for Employees",
+    "Compliance and Security Audit Services"
+  ],
+  benefits: [
+    "Enhanced Protection Against Cyber Threats",
+    "Reduced Risk of Data Breaches",
+    "Improved Regulatory Compliance",
+    "Minimized Security Incident Impact",
+    "Increased Customer Trust and Confidence",
+    "Proactive Threat Prevention"
+  ]
+};
+---
+
+<ServiceLayout frontmatter={frontmatter}>
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Our Approach</h2>
+    <p class="mt-4 text-lg text-slate-600">
+      We take a comprehensive approach to cybersecurity, combining advanced technology with expert knowledge to create a robust security posture for your organization. Our team of certified security professionals works proactively to identify and address potential vulnerabilities before they can be exploited.
+    </p>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold">Industries We Serve</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-4">
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Financial Services</h3>
+        <p class="text-slate-600">Protecting sensitive financial data and transactions</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Healthcare</h3>
+        <p class="text-slate-600">Ensuring HIPAA compliance and patient data security</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">E-commerce</h3>
+        <p class="text-slate-600">Securing online transactions and customer data</p>
+      </div>
+      <div class="bg-slate-50 p-5 rounded-lg">
+        <h3 class="font-semibold">Manufacturing</h3>
+        <p class="text-slate-600">Protecting intellectual property and operational systems</p>
+      </div>
+    </div>
+  </div>
+</ServiceLayout> 
